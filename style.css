@@ -1862,6 +1862,7 @@ body {
   border-radius: 5px;
   position: relative;
   z-index: 2;
+  cursor: pointer;
 }
 
 .section-2 .songs-container .song-1 .num,
