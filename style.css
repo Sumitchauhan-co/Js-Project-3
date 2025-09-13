@@ -274,20 +274,30 @@ body {
 .main {
   height: 80vh;
   display: grid;
-  grid-template-columns: 0.7fr 1.5fr 0.7fr;
+  grid-template-columns: var(--section-1-width, 0.7fr) 0.001fr 1.5fr 0.001fr 0.7fr;
   grid-template-rows: 100%;
   gap: 1vmin;
   margin: 0 1vmin;
+  overflow: hidden;
 }
 
 .section-1 {
   background-color: var(--section-color);
   border-radius: 25px;
+  transition: var(--trans-03);
+}
+
+.resize {
+  width: 2px;
+  cursor: ew-resize;
+  background: var(--light-dark-text-color02);
+  border-radius: 50%;
 }
 
 .section-2 {
   background-color: var(--section-color);
   border-radius: 20px;
+  position: relative;
 }
 
 .section-3 {
@@ -317,6 +327,7 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  white-space: nowrap;
   /* background-color: aqua; */
 }
 
@@ -325,7 +336,7 @@ body {
   width: 35%;
   /* background-color: aqua; */
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   align-items: center;
 }
 
@@ -343,14 +354,85 @@ body {
   /* background-color: blue; */
 }
 
+.section-1 .sec1-header-container .sec1-header .right-container .change {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.sidebar-functions {
+  height: 100px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.open-playlists {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.open-playlists svg {
+  height: 25px;
+  width: 25px;
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+.open-playlists:hover {
+  background-color: var(--button-color02);
+}
+
+.open-playlists:hover svg {
+  opacity: 1;
+}
+
+.add-playlists {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.add-playlists svg {
+  height: 20px;
+  width: 20px;
+  filter: invert(1);
+  opacity: 0.6;
+}
+
+.add-playlists:hover {
+  background-color: var(--button-color02);
+}
+
+.add-playlists:hover svg {
+  opacity: 1;
+}
+
 .section-1
   .sec1-header-container
   .sec1-header
   .right-container
   .mid-button
   svg {
-  height: 45%;
-  width: 25%;
+  height: 20px;
+  width: 20px;
   filter: invert(1);
 }
 
@@ -509,6 +591,12 @@ body {
   height: 100%;
 }
 
+.collapse {
+  opacity: 0;
+  width: 0;
+  margin: 0;
+}
+
 .section-1 .playlist-1,
 .section-1 .playlist-2,
 .section-1 .playlist-3,
@@ -521,14 +609,13 @@ body {
   padding: 7px;
   border-radius: 5px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   cursor: pointer;
 }
 
 .section-1 .playlist-1 .img {
   height: 100%;
-  width: 15%;
+  min-width: 50px;
   background-image: url(images/liked.jpg);
   background-size: cover;
   background-position: center;
@@ -564,6 +651,9 @@ body {
   width: 82%;
   border-radius: 5px;
   /* background-color: aquamarine; */
+  overflow: hidden;
+  white-space: nowrap;
+  margin-left: 10px;
 }
 
 .section-1 .playlist-1 .content-container .content,
@@ -621,7 +711,7 @@ body {
 
 .section-1 .playlist-2 .img {
   height: 100%;
-  width: 15%;
+  min-width: 50px;
   background-image: url(images/feelings.webp);
   background-position: center;
   background-size: cover;
@@ -630,7 +720,7 @@ body {
 
 .section-1 .playlist-3 .img {
   height: 100%;
-  width: 15%;
+  min-width: 50px;
   background-image: url(images/chill\ and\ relax.webp);
   background-position: center;
   background-size: cover;
@@ -639,7 +729,7 @@ body {
 
 .section-1 .playlist-4 .img {
   height: 100%;
-  width: 15%;
+  min-width: 50px;
   background-image: url(images/sound\ tracks.webp);
   background-size: cover;
   background-position: center;
@@ -648,7 +738,7 @@ body {
 
 .section-1 .playlist-5 .img {
   height: 100%;
-  width: 15%;
+  min-width: 50px;
   background-image: url(images/indian\ lofi\ hits.webp);
   background-size: cover;
   background-position: center;
@@ -657,7 +747,7 @@ body {
 
 .section-1 .playlist-6 .img {
   height: 100%;
-  width: 15%;
+  min-width: 50px;
   background-image: url(images/daylist.jpg);
   background-size: cover;
   background-position: center;
@@ -666,7 +756,7 @@ body {
 
 .section-1 .playlist-7 .img {
   height: 100%;
-  width: 15%;
+  min-width: 50px;
   background-image: url(images/repeat\ rewind.jpeg);
   background-size: cover;
   background-position: center;
@@ -675,7 +765,7 @@ body {
 
 .section-1 .playlist-8 .img {
   height: 100%;
-  width: 15%;
+  min-width: 50px;
   background-image: url(images/on\ repeat.jpeg);
   background-size: cover;
   background-position: center;
@@ -711,7 +801,7 @@ body {
 
 .section-2 .header-container {
   height: 35%;
-  width: 50.8vw;
+  width: 100%;
   background: linear-gradient(180deg, #5f1f62, #111111);
   /* background-image: url(); */
   position: absolute;
@@ -1620,7 +1710,7 @@ body {
 }
 
 .section-2 .header-container2 {
-  height: 40%;
+  height: 33%;
   /* background-color: #cfcfcf; */
   padding: 0 3%;
   display: flex;
@@ -1673,8 +1763,8 @@ body {
 }
 
 .section-2 .header-container2 .bg{
-  height: 32%;
-  width: 50.8vw;
+  height: 40%;
+  width: 100%;
   background: linear-gradient(180deg, #3754ac, #111111);
   position: absolute;
   border-radius: 15px;
@@ -1708,6 +1798,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.section-2 .header-function .left .play-pause:hover {
+  transform: scale(1.05);
 }
 
 .section-2 .header-function .left .play-pause svg {
@@ -1988,3 +2082,4 @@ body {
 .section-2 .songs-container .song-7:hover {
   background-color: rgba(63, 63, 63, 0.493);
 }
+

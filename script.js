@@ -134,7 +134,6 @@ function loadSong(index) {
     nextSong();
   });
   songDetails();
-  console.log(songs[index].title);
 
   b.play();
 }
@@ -171,7 +170,6 @@ randomPlay.addEventListener("click", () => {
   let r = Math.floor(Math.random() * 7);
   n = r;
   b.play();
-  console.log("random song played", r);
   playSvg();
   loadSong(n);
   songDetails();
@@ -293,3 +291,71 @@ pageChange1PlayBtn1.addEventListener("click", () => {
     page2.classList.remove("display-none");
   }
 });
+
+
+
+const resizer = document.querySelector(".resize");
+const sec1PlaylistContent = document.querySelectorAll(".section-1 .playlist-container .content-container");
+const sec1NavBarContainer = document.querySelector(".section-1 .sec1-header-container");
+const sec1Header = document.querySelector(".section-1 .sec1-header-container");
+const sec1CloseIcons = document.querySelector(".section-1 .sidebar-functions");
+const sec1OpenPLaylists = document.querySelector(".section-1 .sidebar-functions .open-playlists");
+const sec1Bar = document.querySelector(".section-1 .bar");
+const midBtnSpan = document.querySelector(".section-1 .sec1-header-container .sec1-header .right-container .mid-button span")
+const midBtn = document.querySelector(".section-1 .sec1-header-container .sec1-header .right-container .mid-button")
+const sec1 = document.querySelector(".section-1")
+let isResizing = false;
+
+resizer.addEventListener("mousedown", () => {
+  isResizing = true;
+});
+
+document.addEventListener("mousemove", (e) => {
+  if (!isResizing) return;
+
+  let newWidth = Math.min(Math.max(e.pageX, 60), 365);
+  document.documentElement.style.setProperty("--section-1-width", newWidth + "px");
+
+  if (newWidth < 350) {
+    midBtnSpan.textContent = ""
+    midBtn.classList.add("change")
+  } else if (newWidth > 350) {
+    midBtnSpan.textContent = "Create"
+    midBtn.classList.remove("change")
+  }
+  if (newWidth < 285){
+    document.documentElement.style.setProperty("--section-1-width", 75 + "px");
+    sec1PlaylistContent.forEach(element => {
+      element.classList.add("display-none")
+    });
+    sec1Header.style.display = "none";
+    sec1NavBarContainer.style.display = "none";
+    sec1Bar.style.display = "none";
+    sec1CloseIcons.classList.remove("display-none");
+  } else if(newWidth > 285) {
+    document.documentElement.style.setProperty("--section-1-width", newWidth + "px");
+    sec1PlaylistContent.forEach(element => {
+      element.classList.remove("display-none")
+    });
+    sec1Header.style.display = "flex";
+    sec1NavBarContainer.style.display = "block";
+    sec1Bar.style.display = "flex";
+    sec1CloseIcons.classList.add("display-none");
+  }
+});
+
+document.addEventListener("mouseup", () => {
+  isResizing = false;
+});
+
+
+sec1OpenPLaylists.addEventListener("click",()=>{
+  document.documentElement.style.setProperty("--section-1-width", 360 + "px");
+  sec1PlaylistContent.forEach(element => {
+    element.classList.remove("display-none")
+  });
+  sec1Header.style.display = "flex";
+  sec1NavBarContainer.style.display = "block";
+  sec1Bar.style.display = "flex";
+  sec1CloseIcons.classList.add("display-none");
+})
