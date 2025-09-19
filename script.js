@@ -548,7 +548,7 @@ window.addEventListener("resize", () => {
   ) {
     // header
 
-    mainSection.style.height = "75vh";
+    mainSection.style.height = "70vh";
     mainSection.style.gridTemplateColumns =
       "var(--section-1-width, 0.7fr) 0.001fr 1.5fr";
     header.style.height = "5vh";
@@ -575,11 +575,11 @@ window.addEventListener("resize", () => {
     footerPage.style.gap = "3%";
     footerPage.style.marginTop = "5%";
     footerPage.style.flexDirection = "column";
-    footerPageCont1.style.width = "30%";
+    footerPageCont1.style.width = "35%";
     footerPageCont1.style.height = "90%";
     footerPageCont2.style.width = "110%";
     footerPageCont2.style.width = "100%";
-    footerPageCont1Img.style.width = "35%";
+    footerPageCont1Img.style.width = "25%";
     footerPageCont1Img.style.height = "75%";
     footerPageCont1Content.style.width = "60%";
     footerPageCont1Add.style.width = "20%";
@@ -717,7 +717,7 @@ window.addEventListener("load", () => {
   ) {
     // header
 
-    mainSection.style.height = "75vh";
+    mainSection.style.height = "70vh";
     mainSection.style.gridTemplateColumns =
       "var(--section-1-width, 0.7fr) 0.001fr 1.5fr";
     header.style.height = "5vh";
@@ -744,11 +744,11 @@ window.addEventListener("load", () => {
     footerPage.style.gap = "3%";
     footerPage.style.marginTop = "5%";
     footerPage.style.flexDirection = "column";
-    footerPageCont1.style.width = "30%";
+    footerPageCont1.style.width = "35%";
     footerPageCont1.style.height = "90%";
     footerPageCont2.style.width = "110%";
     footerPageCont2.style.width = "100%";
-    footerPageCont1Img.style.width = "35%";
+    footerPageCont1Img.style.width = "25%";
     footerPageCont1Img.style.height = "75%";
     footerPageCont1Content.style.width = "60%";
     footerPageCont1Add.style.width = "20%";
