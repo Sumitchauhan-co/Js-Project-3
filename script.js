@@ -519,6 +519,26 @@ window.addEventListener("resize", () => {
   }
 });
 
+window.addEventListener("load", () => {
+  if (window.innerWidth <= 768) {
+    document.documentElement.style.setProperty("--section-1-width", 68 + "px");
+    sec1PlaylistContent.forEach((element) => {
+      element.classList.add("display-none");
+    });
+    sec1Container.style.display = "none";
+    sec1Bar.style.display = "none";
+    sec1CloseIcons.classList.remove("display-none");
+  } else {
+    document.documentElement.style.setProperty("--section-1-width", 360 + "px");
+    sec1PlaylistContent.forEach((element) => {
+      element.classList.remove("display-none");
+    });
+    sec1Container.style.display = "block";
+    sec1Bar.style.display = "flex";
+    sec1CloseIcons.classList.add("display-none");
+  }
+});
+
 window.addEventListener("resize", () => {
   if (
     window.innerWidth <= 1025 &&
