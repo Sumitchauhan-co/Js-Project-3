@@ -489,7 +489,7 @@ document.addEventListener("mouseup", () => {
 });
 
 sec1OpenPLaylists.addEventListener("click", () => {
-  document.documentElement.style.setProperty("--section-1-width", 400 + "px");
+  document.documentElement.style.setProperty("--section-1-width", 360 + "px");
   sec1PlaylistContent.forEach((element) => {
     element.classList.remove("display-none");
   });
@@ -587,8 +587,8 @@ window.addEventListener("resize", () => {
     footerPageCont2UpperMid.style.margin = "0";
     footerPageCont2UpperMid.style.height = "20px";
     footerPageCont2UpperMid.style.width = "20px";
-    footerPageCont2UpperMidSvg.style.width = "12px";
-    footerPageCont2UpperMidSvg.style.height = "12px";
+    footerPageCont2UpperMidSvg.style.width = "10px";
+    footerPageCont2UpperMidSvg.style.height = "10px";
     footerPageCont2UpperStartFirstSvg.style.height = "15px";
     footerPageCont2UpperStartFirstSvg.style.width = "15px";
     footerPageCont2UpperStartSecondSvg.style.height = "15px";
@@ -756,8 +756,8 @@ window.addEventListener("load", () => {
     footerPageCont2UpperMid.style.margin = "0";
     footerPageCont2UpperMid.style.height = "20px";
     footerPageCont2UpperMid.style.width = "20px";
-    footerPageCont2UpperMidSvg.style.width = "12px";
-    footerPageCont2UpperMidSvg.style.height = "12px";
+    footerPageCont2UpperMidSvg.style.width = "10px";
+    footerPageCont2UpperMidSvg.style.height = "10px";
     footerPageCont2UpperStartFirstSvg.style.height = "15px";
     footerPageCont2UpperStartFirstSvg.style.width = "15px";
     footerPageCont2UpperStartSecondSvg.style.height = "15px";
