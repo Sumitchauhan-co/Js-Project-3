@@ -4,48 +4,48 @@
     "title": "Saiyara",
     "artist": "Artist A",
     "cover": "covers2/song1.jpeg",
-    "src": "songs2/song1.mp3"
+    "src": "https://github.com/Sumitchauhan-co/Js-Project-3/releases/download/v1.0.0/song1.mp3"
   },
   {
     "id": 2,
     "title": "Pahle Bhi Mein",
     "artist": "Artist B",
     "cover": "covers2/song2.jpeg",
-    "src": "songs2/song2.mp3"
+    "src": "https://github.com/Sumitchauhan-co/Js-Project-3/releases/download/v1.0.0/song2.mp3"
   },
   {
     "id": 3,
     "title": "Finding Her",
     "artist": "Artist C",
     "cover": "covers2/song3.jpeg",
-    "src": "songs2/song3.mp3"
+    "src": "https://github.com/Sumitchauhan-co/Js-Project-3/releases/download/v1.0.0/song3.mp3"
   },
   {
     "id": 4,
     "title": "Tu Hain Toh Me Hu",
     "artist": "Artist D",
     "cover": "covers2/song4.jpeg",
-    "src": "songs2/song4.mp3"
+    "src": "https://github.com/Sumitchauhan-co/Js-Project-3/releases/download/v1.0.0/song4.mp3"
   },
   {
     "id": 5,
     "title": "Raatein Guzari",
     "artist": "Artist E",
     "cover": "covers2/song5.jpeg",
-    "src": "songs2/song5.mp3"
+    "src": "https://github.com/Sumitchauhan-co/Js-Project-3/releases/download/v1.0.0/song5.mp3"
   },
   {
     "id": 6,
     "title": "Thodi Jagah",
     "artist": "Artist F",
     "cover": "covers2/song6.jpeg",
-    "src": "songs2/song6.mp3"
+    "src": "https://github.com/Sumitchauhan-co/Js-Project-3/releases/download/v1.0.0/song6.mp3"
   },
   {
     "id": 7,
     "title": "Tu Jo Hai",
     "artist": "Artist G",
     "cover": "covers2/song7.jpeg",
-    "src": "songs2/song7.mp3"
+    "src": "https://github.com/Sumitchauhan-co/Js-Project-3/releases/download/v1.0.0/song7.mp3"
   }
 ]
