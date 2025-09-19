@@ -687,3 +687,172 @@ window.addEventListener("resize", () => {
   //   }
   // });
 });
+
+window.addEventListener("load", () => {
+  if (
+    window.innerWidth <= 1025 &&
+    window.innerWidth > 350 &&
+    window.innerHeight <= 1375 &&
+    window.innerHeight > 600
+  ) {
+    // header
+
+    mainSection.style.height = "75vh";
+    mainSection.style.gridTemplateColumns =
+      "var(--section-1-width, 0.7fr) 0.001fr 1.5fr";
+    header.style.height = "5vh";
+    headerLeft.style.margin = "10px 20px";
+    headerLeftSvg.style.height = "25px";
+    headerMid1.style.height = "30px";
+    headerMid1.style.width = "30px";
+    headerMid1Svg.style.height = "45%";
+    headerMid2.style.borderRadius = "15px";
+    headerMid21.style.height = "60%";
+    headerMid22.style.fontSize = "12px";
+    headerMid23.style.height = "60%";
+    headerMid.style.width = "65vw";
+    headerRight1.classList.add("display-none");
+    headerRight2.classList.add("display-none");
+    headerRight3.style.width = "30%";
+    headerRight4.style.width = "30%";
+    headerRight3.style.height = "45%";
+    headerRight4.style.height = "45%";
+    headerRight5.style.fontSize = "12px";
+
+    // Footer
+
+    footerPage.style.gap = "3%";
+    footerPage.style.marginTop = "5%";
+    footerPage.style.flexDirection = "column";
+    footerPageCont1.style.width = "30%";
+    footerPageCont1.style.height = "90%";
+    footerPageCont2.style.width = "110%";
+    footerPageCont2.style.width = "100%";
+    footerPageCont1Img.style.width = "35%";
+    footerPageCont1Img.style.height = "75%";
+    footerPageCont1Content.style.width = "60%";
+    footerPageCont1Add.style.width = "20%";
+    footerPageCont1Add.style.width = "20%";
+    footerPageCont2UpperMid.style.margin = "0";
+    footerPageCont2UpperMid.style.height = "20px";
+    footerPageCont2UpperMid.style.width = "20px";
+    footerPageCont2UpperMidSvg.style.width = "12px";
+    footerPageCont2UpperMidSvg.style.height = "12px";
+    footerPageCont2UpperStartFirstSvg.style.height = "15px";
+    footerPageCont2UpperStartFirstSvg.style.width = "15px";
+    footerPageCont2UpperStartSecondSvg.style.height = "15px";
+    footerPageCont2UpperStartSecondSvg.style.width = "15px";
+    footerPageCont2UpperEndFirstSvg.style.height = "15px";
+    footerPageCont2UpperEndSecondSvg.style.width = "15px";
+    footerPageCont2LowerProgressContainer.style.width = "50%";
+
+    sec2Page1Phone.classList.remove("display-none");
+    page1.style.display = "none";
+    page2.style.display = "none";
+
+    playlist1.addEventListener("click", () => {
+      document.documentElement.style.setProperty(
+        "--section-1-width",
+        68 + "px"
+      );
+      sec1PlaylistContent.forEach((element) => {
+        element.classList.add("display-none");
+      });
+      sec1Container.style.display = "none";
+      sec1Bar.style.display = "none";
+      sec1CloseIcons.classList.remove("display-none");
+
+      // const page1Hidden = sec2Page1Phone.classList.contains("display-none");
+
+      // sec2Page1Phone.classList.toggle("display-none",!page1Hidden)
+      // sec2Page2Phone.classList.toggle("display-none",page1Hidden)
+      if (sec2Page2Phone.classList.contains("display-none")) {
+        sec2Page1Phone.classList.add("display-none");
+        sec2Page2Phone.classList.remove("display-none");
+      } else if (sec2Page1Phone.classList.contains("display-none")) {
+        sec2Page1Phone.classList.remove("display-none");
+        sec2Page2Phone.classList.add("display-none");
+      }
+    });
+  } else {
+    // header
+
+    mainSection.style.height = "80vh";
+    mainSection.style.gridTemplateColumns =
+      "var(--section-1-width, 0.7fr) 0.001fr 1.5fr 0.001fr 0.7fr";
+    header.style.height = "8vh";
+    headerLeft.style.margin = "15px 30px";
+    headerLeftSvg.style.height = "30px";
+    headerMid1.style.height = "45px";
+    headerMid1.style.width = "45px";
+    headerMid1Svg.style.height = "55%";
+    headerMid2.style.borderRadius = "20px";
+    headerMid21.style.height = "85%";
+    headerMid22.style.fontSize = "15px";
+    headerMid23.style.height = "85%";
+    headerMid.style.width = "35vw";
+    headerRight1.classList.remove("display-none");
+    headerRight2.classList.remove("display-none");
+    headerRight3.style.width = "10%";
+    headerRight4.style.width = "10%";
+    headerRight3.style.height = "65%";
+    headerRight4.style.height = "65%";
+    headerRight5.style.fontSize = "17px";
+
+    // Footer
+
+    footerPage.style.gap = "0";
+    footerPage.style.marginTop = "0";
+    footerPage.style.flexDirection = "row";
+    footerPageCont1.style.width = "20%";
+    footerPageCont1.style.height = "100%";
+    footerPageCont2.style.width = "35%";
+    footerPageCont2.style.height = "100%";
+    footerPageCont1Img.style.width = "17%";
+    footerPageCont1Img.style.height = "90%";
+    footerPageCont1Content.style.width = "25%";
+    footerPageCont1Add.style.width = "10%";
+    footerPageCont2UpperMid.style.margin = "0 10px";
+    footerPageCont2UpperMid.style.height = "29px";
+    footerPageCont2UpperMid.style.width = "29px";
+    footerPageCont2UpperMidSvg.style.width = "15px";
+    footerPageCont2UpperMidSvg.style.height = "15px";
+    footerPageCont2UpperStartFirstSvg.style.height = "17px";
+    footerPageCont2UpperStartFirstSvg.style.width = "17px";
+    footerPageCont2UpperStartSecondSvg.style.height = "17px";
+    footerPageCont2UpperStartSecondSvg.style.width = "17px";
+    footerPageCont2UpperEndFirstSvg.style.height = "17px";
+    footerPageCont2UpperEndFirstSvg.style.width = "17px";
+    footerPageCont2UpperEndSecondSvg.style.height = "17px";
+    footerPageCont2UpperEndSecondSvg.style.width = "17px";
+    footerPageCont2LowerProgressContainer.style.width = "80%";
+
+    sec2Page1Phone.classList.add("display-none");
+    sec2Page2Phone.classList.add("display-none");
+    page1.style.display = "revert";
+    page2.style.display = "none";
+  }
+
+  // playlist1.addEventListener("click", ()=> {
+  //   document.documentElement.style.setProperty("--section-1-width", 68 + "px");
+  //   sec1PlaylistContent.forEach(element => {
+  //     element.classList.add("display-none")
+  //   });
+  //   sec1Container.style.display = "none";
+  //   sec1Bar.style.display = "none";
+  //   sec1CloseIcons.classList.remove("display-none");
+
+  //   // const page1Hidden = sec2Page1Phone.classList.contains("display-none");
+
+  //   // sec2Page1Phone.classList.toggle("display-none",!page1Hidden)
+  //   // sec2Page2Phone.classList.toggle("display-none",page1Hidden)
+  //   if (sec2Page2Phone.classList.contains("display-none")) {
+  //     sec2Page1Phone.classList.add("display-none");
+  //     sec2Page2Phone.classList.remove("display-none");
+  //   }
+  //   else if(sec2Page1Phone.classList.contains("display-none")){
+  //     sec2Page1Phone.classList.remove("display-none");
+  //     sec2Page2Phone.classList.add("display-none");
+  //   }
+  // });
+});
