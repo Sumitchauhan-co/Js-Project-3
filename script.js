@@ -1,6 +1,7 @@
 let b;
 let n = 0;
 let songs = [];
+let resize = false;
 
 let playBtn = document.querySelector(".footer-page .container-2 .upper .mid");
 let page2playBtn = document.querySelector(
@@ -172,7 +173,7 @@ function formatTime(seconds) {
 }
 
 async function main() {
-  let a = await fetch("songs2.json"); //songs2.json
+  let a = await fetch("songs2.json"); //songs2.json //http://127.0.0.1:5500/songs2.json
   songs = await a.json();
   loadSong(n);
 
@@ -231,12 +232,12 @@ async function main() {
     c.addEventListener("loadedmetadata", () => {
       let d = formatTime(c.duration);
       document.querySelector(`#duration-${element.id}`).textContent = d;
-      console.log(d);
+      // console.log(d);
     });
     c.addEventListener("loadedmetadata", () => {
       let e = formatTime(c.duration);
       document.querySelector(`#duration-${element.id}`).textContent = e;
-      console.log(e);
+      // console.log(e);
     });
   });
 }
@@ -413,15 +414,25 @@ container.addEventListener("click", (e) => {
   b.currentTime = newTime;
 });
 
-playlist1.addEventListener("click", () => {
-  if (page2.classList.contains("display-none")) {
-    page1.classList.add("display-none");
-    page2.classList.remove("display-none");
-  } else {
-    page2.classList.add("display-none");
-    page1.classList.remove("display-none");
+let play = function() {
+  if (resize == false) {
+    if (page1.classList.contains("display-none")) {
+      page1.classList.remove("display-none");
+      page2.classList.add("display-none");
+      console.log("page1 is visible");
+      sec2Page1Phone.classList.add("display-none");
+      sec2Page2Phone.classList.add("display-none");
+    } else {
+      page1.classList.add("display-none");
+      page2.classList.remove("display-none");
+      sec2Page1Phone.classList.add("display-none");
+      sec2Page2Phone.classList.add("display-none");
+      console.log("page2 is visible");
+    }
   }
-});
+}
+
+playlist1.addEventListener("click", play);
 
 pageChange1PlayBtn1.addEventListener("click", () => {
   if (page2.classList.contains("display-none")) {
@@ -489,7 +500,7 @@ document.addEventListener("mouseup", () => {
 });
 
 sec1OpenPLaylists.addEventListener("click", () => {
-  document.documentElement.style.setProperty("--section-1-width", 360 + "px");
+  document.documentElement.style.setProperty("--section-1-width", 375 + "px");
   sec1PlaylistContent.forEach((element) => {
     element.classList.remove("display-none");
   });
@@ -500,23 +511,23 @@ sec1OpenPLaylists.addEventListener("click", () => {
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth <= 768) {
-    document.documentElement.style.setProperty("--section-1-width", 68 + "px");
-    sec1PlaylistContent.forEach((element) => {
-      element.classList.add("display-none");
-    });
-    sec1Container.style.display = "none";
-    sec1Bar.style.display = "none";
-    sec1CloseIcons.classList.remove("display-none");
-  } else {
-    document.documentElement.style.setProperty("--section-1-width", 360 + "px");
-    sec1PlaylistContent.forEach((element) => {
-      element.classList.remove("display-none");
-    });
-    sec1Container.style.display = "block";
-    sec1Bar.style.display = "flex";
-    sec1CloseIcons.classList.add("display-none");
-  }
+  // if (window.innerWidth <= 768) {
+  //   document.documentElement.style.setProperty("--section-1-width", 68 + "px");
+  //   sec1PlaylistContent.forEach((element) => {
+  //     element.classList.add("display-none");
+  //   });
+  //   sec1Container.style.display = "none";
+  //   sec1Bar.style.display = "none";
+  //   sec1CloseIcons.classList.remove("display-none");
+  // } else {
+  //   document.documentElement.style.setProperty("--section-1-width", 360 + "px");
+  //   sec1PlaylistContent.forEach((element) => {
+  //     element.classList.remove("display-none");
+  //   });
+  //   sec1Container.style.display = "block";
+  //   sec1Bar.style.display = "flex";
+  //   sec1CloseIcons.classList.add("display-none");
+  // }
 });
 
 window.addEventListener("load", () => {
@@ -540,6 +551,7 @@ window.addEventListener("load", () => {
 });
 
 window.addEventListener("resize", () => {
+  resize = true;
   if (
     window.innerWidth <= 1025 &&
     window.innerWidth > 350 &&
@@ -598,8 +610,12 @@ window.addEventListener("resize", () => {
     footerPageCont2LowerProgressContainer.style.width = "50%";
 
     sec2Page1Phone.classList.remove("display-none");
-    page1.style.display = "none";
-    page2.style.display = "none";
+    // page1.style.display = "none";
+    // page2.style.display = "none";
+    page1.classList.add("display-none");
+    page2.classList.add("display-none");
+
+    playlist1.removeEventListener("click", play);
 
     playlist1.addEventListener("click", () => {
       document.documentElement.style.setProperty(
@@ -617,14 +633,54 @@ window.addEventListener("resize", () => {
 
       // sec2Page1Phone.classList.toggle("display-none",!page1Hidden)
       // sec2Page2Phone.classList.toggle("display-none",page1Hidden)
-      if (sec2Page2Phone.classList.contains("display-none")) {
-        sec2Page1Phone.classList.add("display-none");
-        sec2Page2Phone.classList.remove("display-none");
-      } else if (sec2Page1Phone.classList.contains("display-none")) {
+      if (sec2Page1Phone.classList.contains("display-none")) {
         sec2Page1Phone.classList.remove("display-none");
         sec2Page2Phone.classList.add("display-none");
+        console.log("sec2Page2Phone visible");
+      } else {
+        sec2Page1Phone.classList.add("display-none");
+        sec2Page2Phone.classList.remove("display-none");
+        console.log("sec2Page1Phone visible");
       }
     });
+
+    sec1OpenPLaylists.addEventListener("click", () => {
+      document.documentElement.style.setProperty(
+        "--section-1-width",
+        375 + "px"
+      );
+      sec1PlaylistContent.forEach((element) => {
+        element.classList.remove("display-none");
+      });
+      // sec1Header.style.display = "flex";
+      sec1Container.style.display = "block";
+      sec1Bar.style.display = "flex";
+      sec1CloseIcons.classList.add("display-none");
+    });
+
+    if (window.innerWidth <= 768) {
+      document.documentElement.style.setProperty(
+        "--section-1-width",
+        68 + "px"
+      );
+      sec1PlaylistContent.forEach((element) => {
+        element.classList.add("display-none");
+      });
+      sec1Container.style.display = "none";
+      sec1Bar.style.display = "none";
+      sec1CloseIcons.classList.remove("display-none");
+    } else {
+      document.documentElement.style.setProperty(
+        "--section-1-width",
+        360 + "px"
+      );
+      sec1PlaylistContent.forEach((element) => {
+        element.classList.remove("display-none");
+      });
+      sec1Container.style.display = "block";
+      sec1Bar.style.display = "flex";
+      sec1CloseIcons.classList.add("display-none");
+    }
   } else {
     // header
 
@@ -680,8 +736,11 @@ window.addEventListener("resize", () => {
 
     sec2Page1Phone.classList.add("display-none");
     sec2Page2Phone.classList.add("display-none");
-    page1.style.display = "revert";
-    page2.style.display = "none";
+    // page1.style.display = "revert";
+    // page2.style.display = "none";
+
+    page1.classList.remove("display-none");
+    // page2.classList.remove("display-none");
   }
 
   // playlist1.addEventListener("click", ()=> {
@@ -767,8 +826,10 @@ window.addEventListener("load", () => {
     footerPageCont2LowerProgressContainer.style.width = "50%";
 
     sec2Page1Phone.classList.remove("display-none");
-    page1.style.display = "none";
-    page2.style.display = "none";
+    // page1.style.display = "none";
+    // page2.style.display = "none";
+    page1.classList.add("display-none");
+    page2.classList.add("display-none");
 
     playlist1.addEventListener("click", () => {
       document.documentElement.style.setProperty(
@@ -794,6 +855,44 @@ window.addEventListener("load", () => {
         sec2Page2Phone.classList.add("display-none");
       }
     });
+
+    sec1OpenPLaylists.addEventListener("click", () => {
+      document.documentElement.style.setProperty(
+        "--section-1-width",
+        375 + "px"
+      );
+      sec1PlaylistContent.forEach((element) => {
+        element.classList.remove("display-none");
+      });
+      // sec1Header.style.display = "flex";
+      sec1Container.style.display = "block";
+      sec1Bar.style.display = "flex";
+      sec1CloseIcons.classList.add("display-none");
+    });
+
+    if (window.innerWidth <= 768) {
+      document.documentElement.style.setProperty(
+        "--section-1-width",
+        68 + "px"
+      );
+      sec1PlaylistContent.forEach((element) => {
+        element.classList.add("display-none");
+      });
+      sec1Container.style.display = "none";
+      sec1Bar.style.display = "none";
+      sec1CloseIcons.classList.remove("display-none");
+    } else {
+      document.documentElement.style.setProperty(
+        "--section-1-width",
+        360 + "px"
+      );
+      sec1PlaylistContent.forEach((element) => {
+        element.classList.remove("display-none");
+      });
+      sec1Container.style.display = "block";
+      sec1Bar.style.display = "flex";
+      sec1CloseIcons.classList.add("display-none");
+    }
   } else {
     // header
 
@@ -849,8 +948,9 @@ window.addEventListener("load", () => {
 
     sec2Page1Phone.classList.add("display-none");
     sec2Page2Phone.classList.add("display-none");
-    page1.style.display = "revert";
-    page2.style.display = "none";
+    // page1.style.display = "revert";
+    // page2.style.display = "none";
+    page1.classList.remove("display-none");
   }
 
   // playlist1.addEventListener("click", ()=> {
