@@ -91,7 +91,7 @@
 } */
 
 .section-2 .container-class .playlists-container {
-  height: 20%;
+  height: 22%;
   /* background-color: lightskyblue; */
   margin-top: 1%;
   display: grid;
@@ -128,7 +128,7 @@
   height: 100%;
   width: 30%;
   /* background-color: bisque; */
-  background-image: url(assets/images/p1.jpg);
+  background-image: url(../assets/images/p1.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 5px;
@@ -158,7 +158,7 @@
   height: 100%;
   width: 30%;
   /* background-color: bisque; */
-  background-image: url(assets/images/p2.jpg);
+  background-image: url(../assets/images/p2.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 5px;
@@ -169,7 +169,7 @@
   height: 100%;
   width: 30%;
   /* background-color: bisque; */
-  background-image: url(assets/images/p3.jpg);
+  background-image: url(../assets/images/p3.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 5px;
@@ -180,7 +180,7 @@
   height: 100%;
   width: 30%;
   /* background-color: bisque; */
-  background-image: url(assets/images/p4.jpg);
+  background-image: url(../assets/images/p4.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 5px;
@@ -191,7 +191,7 @@
   height: 100%;
   width: 30%;
   /* background-color: bisque; */
-  background-image: url(assets/images/p5.jpg);
+  background-image: url(../assets/images/p5.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 5px;
@@ -202,7 +202,7 @@
   height: 100%;
   width: 30%;
   /* background-color: bisque; */
-  background-image: url(assets/images/p6.jpg);
+  background-image: url(../assets/images/p6.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 5px;
@@ -213,7 +213,7 @@
   height: 100%;
   width: 30%;
   /* background-color: bisque; */
-  background-image: url(assets/images/p7.jpg);
+  background-image: url(../assets/images/p7.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 5px;
@@ -224,7 +224,7 @@
   height: 100%;
   width: 30%;
   /* background-color: bisque; */
-  background-image: url(assets/images/p8.jpg);
+  background-image: url(../assets/images/p8.jpg);
   background-size: cover;
   background-position: center;
   border-top-left-radius: 5px;
@@ -386,7 +386,7 @@
 .container-class .recently-played .content-container .playlist-1 .img {
   height: 85%;
   width: 95%;
-  background-image: url(assets/images/p2.jpg);
+  background-image: url(../assets/images/p2.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 7px;
@@ -406,7 +406,7 @@
 .container-class .recently-played .content-container .playlist-2 .img {
   height: 85%;
   width: 95%;
-  background-image: url(assets/images/p3.jpg);
+  background-image: url(../assets/images/p3.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 7px;
@@ -415,7 +415,7 @@
 .container-class .recently-played .content-container .playlist-3 .img {
   height: 85%;
   width: 95%;
-  background-image: url(assets/images/p4.jpg);
+  background-image: url(../assets/images/p4.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 7px;
@@ -424,7 +424,7 @@
 .container-class .recently-played .content-container .playlist-4 .img {
   height: 85%;
   width: 95%;
-  background-image: url(assets/images/p5.jpg);
+  background-image: url(../assets/images/p5.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 7px;
@@ -432,7 +432,7 @@
 .container-class .recently-played .content-container .playlist-5 .img {
   height: 85%;
   width: 95%;
-  background-image: url(assets/images/p6.jpg);
+  background-image: url(../assets/images/p6.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 7px;

@@ -1,10 +1,10 @@
-.section-2 .page-1-phone {
+.section-2 .page-1 {
   height: 100%;
   width: 100%;
 }
 
-.section-2 .phone-header-container2 {
-  height: 25%;
+.section-2 .header-container2 {
+  height: 33%;
   /* background-color: #cfcfcf; */
   padding: 0 3%;
   display: flex;
@@ -12,61 +12,61 @@
   justify-content: center;
 }
 
-.section-2 .page-1-phone .phone-header-container2 .img {
-  height: 80%;
-  width: 40%;
+.section-2 .page-1 .header-container2 .img {
+  height: 90%;
+  width: 27%;
   /* background-color: aqua; */
   margin-right: 2%;
-  background-image: url(assets/images/p1.jpg);
+  background-image: url(../assets/images/p1.jpg);
   background-size: cover;
   background-position: center;
   position: relative;
   z-index: 2;
 }
 
-.section-2 .phone-header-container2 .content {
+.section-2 .header-container2 .content {
   height: 80%;
-  width: 55%;
+  width: 70%;
   /* background-color: aqua; */
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   color: white;
   position: relative;
   z-index: 2;
 }
 
-.section-2 .phone-header-container2 .content span {
+.section-2 .header-container2 .content span {
   height: 15%;
   width: 100%;
-  font-size: 13px;
+  font-size: 17px;
 }
 
-.section-2 .phone-header-container2 .content h1 {
-  height: 30%;
-  font-size: 25px;
+.section-2 .header-container2 .content h1 {
+  height: 60%;
+  font-size: 85px;
 }
 
-.section-2 .phone-header-container2 .content div {
-  height: 15%;
+.section-2 .header-container2 .content div {
+  height: 10%;
 }
 
-.section-2 .phone-header-container2 .content div > :nth-child(2) {
+.section-2 .header-container2 .content div > :nth-child(2) {
   color: var(--dark-text-color);
-  font-size: 13px;
+  font-size: 15px;
 }
 
-.section-2 .page-1-phone .phone-header-container2 .bg {
-  height: 17%;
-  width: 83%;
+.section-2 .page-1 .header-container2 .bg {
+  height: 27%;
+  width: 54%;
   background: linear-gradient(180deg, #3754ac, #111111);
   position: absolute;
   border-radius: 15px;
   z-index: 1;
 }
 
-.section-2 .phone-header-function {
-  height: 10%;
+.section-2 .header-function {
+  height: 12%;
   padding: 0 2%;
   /* background-color: #1f3062; */
   display: flex;
@@ -75,18 +75,18 @@
   z-index: 2;
 }
 
-.section-2 .phone-header-function .left {
+.section-2 .header-function .left {
   height: 100%;
-  width: 45%;
+  width: 30%;
   /* background-color: #aeaeae; */
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.section-2 .phone-header-function .left .play-pause {
-  height: 40px;
-  width: 40px;
+.section-2 .header-function .left .play-pause {
+  height: 50px;
+  width: 50px;
   border-radius: 50%;
   background-color: rgb(0, 200, 0);
   display: flex;
@@ -94,55 +94,48 @@
   align-items: center;
 }
 
-.section-2 .phone-header-function .left .play-pause:hover {
+.section-2 .header-function .left .play-pause:hover {
   transform: scale(1.05);
 }
 
-.section-2 .phone-header-function .left .play-pause svg:nth-child(1) {
-  height: 20px;
-  width: 20px;
-  border-radius: 50%;
-  color: black;
-}
-
-.section-2 .phone-header-function .left .play-pause svg:nth-child(2) {
+.section-2 .header-function .left .play-pause svg {
   height: 22px;
   width: 22px;
   border-radius: 50%;
   color: black;
 }
 
-.section-2 .phone-header-function .left > div:hover svg {
+.section-2 .header-function .left > div:hover svg {
   opacity: 0.9;
 }
 
-.section-2 .phone-header-function .left .download svg {
-  height: 20px;
-  width: 20px;
+.section-2 .header-function .left .download svg {
+  height: 32px;
+  width: 32px;
   filter: invert(1);
   opacity: 0.6;
   transition: var(--trans-02);
 }
 
-.section-2 .phone-header-function .left .invite svg {
-  height: 20px;
-  width: 20px;
+.section-2 .header-function .left .invite svg {
+  height: 32px;
+  width: 32px;
   filter: invert(1);
   opacity: 0.6;
   transition: var(--trans-02);
 }
 
-.section-2 .phone-header-function .left .options svg {
-  height: 20px;
-  width: 20px;
+.section-2 .header-function .left .options svg {
+  height: 32px;
+  width: 32px;
   filter: invert(1);
   opacity: 0.6;
   transition: var(--trans-02);
 }
 
-.section-2 .phone-header-function .right {
+.section-2 .header-function .right {
   height: 100%;
-  width: 15%;
+  width: 7%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -150,83 +143,74 @@
   opacity: 0.6;
   transition: var(--trans-02);
 }
-.section-2 .phone-header-function .right svg {
-  height: 12px;
-  width: 12px;
+.section-2 .header-function .right svg {
+  height: 22px;
+  width: 22px;
   filter: invert(1);
 }
 
-.section-2 .phone-header-function .right:hover {
+.section-2 .header-function .right:hover {
   opacity: 0.9;
 }
 
-.section-2 .phone-header-row {
+.section-2 .header-row {
   height: 10%;
   display: flex;
   align-items: center;
   padding: 2%;
-  justify-content: space-between;
   /* background-color: brown; */
   color: white;
   position: relative;
   z-index: 2;
-  font-size: 13px;
 }
 
-.section-2 .phone-header-row .songs {
-  display: flex;
-  flex-direction: row;
-}
-
-.section-2 .phone-header-row .songs .hash {
+.section-2 .header-row .hash {
   height: 100%;
-  width: 30px;
+  width: 6%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
   /* background-color: rgb(42, 165, 73); */
 }
-.section-2 .phone-header-row .songs .title {
+.section-2 .header-row .title {
   height: 100%;
-  width: 40px;
+  width: 40%;
   display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: 17px;
+  justify-content: start;
   /* background-color: rgb(65, 42, 165); */
 }
 
-/*.section-2 .phone-header-row .album {
+.section-2 .header-row .album {
   height: 100%;
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: start;
-  background-color: rgb(157, 165, 42);
-} */
+  /* background-color: rgb(157, 165, 42); */
+}
 
-/* .section-2 .phone-header-row .added-date {
-  height: 100%;
-  width: 20%;
-  display: flex;
-  align-items: center;
-  justify-content: start;
-  background-color: rgb(42, 128, 165);
-} */
-
-.section-2 .phone-header-row .duration {
+.section-2 .header-row .added-date {
   height: 100%;
   width: 15%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
+  /* background-color: rgb(42, 128, 165); */
+}
+
+.section-2 .header-row .duration {
+  height: 100%;
+  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
   /* background-color: rgb(116, 42, 165); */
 }
 
-.section-2 .phone-header-row .duration svg {
-  height: 17px;
-  width: 17px;
+.section-2 .header-row .duration svg {
+  height: 20px;
+  width: 20px;
   filter: invert(1);
 }
 
@@ -238,23 +222,21 @@
   margin-left: 3%;
 }
 
-.section-2 .phone-songs-container {
+.section-2 .songs-container {
   height: max-content;
   width: 96%;
   /* background-color: chartreuse; */
   color: white;
   margin: 2%;
-  font-size: 10px;
 }
 
-.section-2 .phone-songs-container > div {
+.section-2 .songs-container > div {
   height: 8vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: start;
-  padding: 3%;
-  font-size: 12px;
+  padding: 1%;
   transition: var(--trans-02);
   border-radius: 5px;
   position: relative;
@@ -262,37 +244,36 @@
   cursor: pointer;
 }
 
-.section-2 .phone-songs-container > div > div:nth-child(1) {
+.section-2 .songs-container > div > div:nth-child(1) {
   height: 100%;
-  width: 10%;
+  width: 5%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 15px;
 }
 
-.section-2 .phone-songs-container > div > div:nth-child(2) {
-  height: 80%;
-  width: 15%;
-  background-image: url(assets/images/default\ song\ cover.jpg);
+.section-2 .songs-container > div > div:nth-child(2) {
+  height: 100%;
+  width: 6%;
+  background-image: url(../assets/images/default\ song\ cover.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 5px;
 }
 
-.section-2 .phone-songs-container > div > div:nth-child(3) {
+.section-2 .songs-container > div > div:nth-child(3) {
   height: 100%;
-  width: 70%;
+  width: 30%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-left: 3%;
-  /* overflow: hidden;
+  margin: 0 3%;
+  overflow: hidden;
   white-space: nowrap;
-  position: relative; */
+  position: relative;
 }
 
-.section-2 .phone-songs-container > div > div:nth-child(3) .song-name {
+.section-2 .songs-container > div > div:nth-child(3) .song-name {
   height: 50%;
   width: 100%;
   display: flex;
@@ -300,10 +281,10 @@
   justify-content: start;
   /* display: inline-block; */
   /* padding-left: 50%; */
-  /* animation: scrollText 5s linear infinite; */
+  /* animation: scrollText s linear infinite; */
 }
 
-.section-2 .phone-songs-container > div > div:nth-child(3) .song-artist {
+.section-2 .songs-container > div > div:nth-child(3) .song-artist {
   height: 50%;
   width: 100%;
   display: flex;
@@ -311,38 +292,33 @@
   justify-content: start;
 }
 
-/* .section-2 .phone-songs-container > div > div:nth-child(4) {
+.section-2 .songs-container > div > div:nth-child(4) {
   height: 100%;
   width: 25%;
   display: flex;
   align-items: center;
   justify-content: start;
-  padding-left: 3%;
-  font-size: 10px;
   color: var(--dark-text-color);
-} */
+}
 
-/* .section-2 .phone-songs-container > div > div:nth-child(5) {
+.section-2 .songs-container > div > div:nth-child(5) {
   height: 100%;
   width: 20%;
   display: flex;
   align-items: center;
   justify-content: start;
-  padding-left: 3%;
-  font-size: 10px;
-  color: var(--dark-text-color);
-} */
-
-.section-2 .phone-songs-container > div > div:nth-child(4) {
-  height: 100%;
-  width: 15%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 15px;
   color: var(--dark-text-color);
 }
 
-.section-2 .phone-songs-container > div:hover {
+.section-2 .songs-container > div > div:nth-child(6) {
+  height: 100%;
+  width: 13%;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  color: var(--dark-text-color);
+}
+
+.section-2 .songs-container > div:hover {
   background-color: rgba(63, 63, 63, 0.493);
 }

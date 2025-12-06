@@ -1,4 +1,4 @@
-# 🎧 Spotify-Clone Music Player  
+# 🎧 Spotify-Clone Music Player
 
 > A modern, Spotify-inspired music streaming web app built with **HTML, CSS, and JavaScript** — simple, smooth, and responsive.
 > An interactive, fully responsive music player web app — designed for seamless playback across devices and dynamic playlist control.
@@ -21,27 +21,28 @@ This initiative replicates core streaming-app behavior through a lightweight, hi
 The solution delivers a seamless playback experience featuring dynamic routing, JSON-based song management, and a custom audio engine built using JavaScript’s Audio() API.
 
 ---
+
 ## 🔧 Features
 
 - **Modular Architecture**: Multi-page setup with reusable components and clean separation of concerns.
 - **Dynamic Music Loader**: Songs, metadata, and assets sourced directly from JSON.
 - **Custom Audio Engine** supporting:
-    - Play / Pause
-    - Next / Previous
-    - Seek Control
-    - Volume Slider with real-time audio binding
+  - Play / Pause
+  - Next / Previous
+  - Seek Control
+  - Volume Slider with real-time audio binding
 - **Responsive Design**: Optimized for mobile, tablet & desktop screens.
 - **State Persistence**: Retains last-used volume & playback states.
 - **Smooth UI Interactions**: Animated transitions, skeleton loaders, event-driven updates.
 
 ---
 
-## 🧩 Tech Stack  
+## 🧩 Tech Stack
 
 - **Frontend:** HTML5, CSS3, JavaScript(ES6)
 - **Data Source:** JSON-driven playlist structure
 - **Version Control:** Git + Github
-- **Deployement:** GitHub Pages  
+- **Deployement:** GitHub Pages
 
 ---
 
@@ -54,9 +55,10 @@ The solution delivers a seamless playback experience featuring dynamic routing, 
 
 ---
 
-## 🗂️ Project Structure  
+## 🗂️ Project Structure
 
-JS Project-3/
+```
+Spotify-Clone/
 │
 ├── assets/
 │   ├── covers
@@ -69,46 +71,49 @@ JS Project-3/
 ├── json/
 │   ├── songs.json
 │   ├── songs2.json
-│   └── songs3.
-├── header.css
-├── header.js
-├── page1.css
-├── page1.js
-├── page2.css
-├── page2.js
-├── page3.css
-├── page3.js
-├── phonePage1.css
-├── phonePage1.js
-├── phonePage2.css
-├── phonePage2.js
-├── phonePage3.css
-├── phonePage3.js
-├── footer.css
-├── footer.js
+│   └── songs3.json
+├── components/
+│   ├── header.css
+│   ├── header.js
+│   ├── homePage.css
+│   ├── homePage.js
+│   ├── page1.css
+│   ├── page1.js
+│   ├── page2.css
+│   ├── page2.js
+│   ├── phoneHomePage.css
+│   ├── phoneHomePage.js
+│   ├── phonePage1.css
+│   ├── phonePage1.js
+│   ├── phonePage2.css
+│   ├── phonePage2.js
+│   ├── section1.css
+│   ├── section1.js
+│   ├── section2.css
+│   ├── section2.js
+│   ├── footer.css
+│   └── footer.js
 ├── index.html
 ├── script.js
 ├── script2.js
-├── section1.css
-├── section1.css
-├── section3.css
-├── section3.css
+├── script3.js
 ├── style.css
 └── README.md
+```
 
 ---
 
-## 🧠 Future Enhancements  
+## 🧠 Future Enhancements
 
 - 🎨 Extract the avg color from image to show in the background of home page when hover the each image container
 
 ---
 
-## 👨‍💻 Developer  
+## 👨‍💻 Developer
 
 **Sumit Chauhan**  
 🎓 B.Tech CSE Core  
-💻 Passionate about web development, design, and creative problem-solving.  
+💻 Passionate about web development, design, and creative problem-solving.
 
 ---
 

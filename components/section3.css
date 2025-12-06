@@ -74,7 +74,8 @@
   align-items: center;
 }
 
-.section-3 .sec3-header .first .hide-btn:hover, .section-3 .sec3-header .second > div:hover {
+.section-3 .sec3-header .first .hide-btn:hover,
+.section-3 .sec3-header .second > div:hover {
   background-color: var(--button-color02);
 }
 
@@ -88,7 +89,7 @@
 .section-3 .banner .img {
   height: 100%;
   width: 100%;
-  background-image: url(assets/images/default\ song\ cover.jpg);
+  background-image: url(../assets/images/default\ song\ cover.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

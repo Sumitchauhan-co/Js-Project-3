@@ -10,7 +10,7 @@
 .footer-page .container-1 .img {
   height: 90%;
   width: 20%;
-  background-image: url(assets/images/default\ song\ cover.jpg);
+  background-image: url(../assets/images/default\ song\ cover.jpg);
   background-size: cover;
   background-position: center;
   border-radius: 5px;

@@ -790,7 +790,7 @@ view.addEventListener("click", () => {
     // sec2.style.width = "827px";
     sec2.style.width = "auto";
 
-    sec2Header.style.height = "20%";
+    sec2Header.style.height = "22%";
     sec2Header.style.gridTemplateColumns =
       "repeat(auto-fit, minmax(150px, 1fr))";
     sec2HeaderDivsPlayBtn.forEach((element) => {

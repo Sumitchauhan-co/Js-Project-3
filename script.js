@@ -929,7 +929,7 @@ document.addEventListener("mousemove", (e) => {
     sec2Divs.forEach((element) => {
       element.style.height = "90%";
     });
-    sec2Header.style.height = "20%";
+    sec2Header.style.height = "22%";
     sec2HeaderDivsPlayBtn.forEach((element) => {
       element.style.top = "3%";
     });
@@ -1122,7 +1122,7 @@ sec1OpenPLaylists.addEventListener("click", () => {
   // sec1PlaylistContainerDivImg.forEach((element) => {
   //   element.style.minWidth = "40px";
   // });
-  sec2Header.style.height = "20%";
+  sec2Header.style.height = "22%";
   sec2HeaderDivsPlayBtn.forEach((element) => {
     element.style.top = "3%";
   });
