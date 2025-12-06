@@ -97,8 +97,8 @@
 }
 
 .container-2 .upper .start .first svg {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
   filter: invert(1);
   opacity: 0.7;
   transition: var(--trans-02);
@@ -115,8 +115,8 @@
 }
 
 .container-2 .upper .start .second svg {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
   filter: invert(1);
   opacity: 0.7;
   transition: var(--trans-02);
@@ -143,8 +143,8 @@
 }
 
 .container-2 .upper .end .first svg {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
   filter: invert(1);
   opacity: 0.7;
   transition: var(--trans-02);
@@ -161,8 +161,8 @@
 }
 
 .container-2 .upper .end .second svg {
-  height: 20px;
-  width: 20px;
+  height: 22px;
+  width: 22px;
   filter: invert(1);
   opacity: 0.7;
   transition: var(--trans-02);
@@ -211,7 +211,7 @@
 }
 
 .footer-page .container-2 .lower .progress-container {
-  height: 5px;
+  height: 7px;
   width: 80%;
   background-color: var(--button-hover-color);
   border-radius: 25px;
@@ -321,24 +321,25 @@
   -webkit-appearance: none;
   appearance: none;
   width: 100%;
-  height: 4px;
+  /* height: 4px; */
   background: #333;
+  /* background: transparent; */
   border-radius: 2px;
   outline: none;
   transition: background 0.3s ease;
 }
 
 #volume-slider::-webkit-slider-runnable-track {
-  height: 4px;
-  background: linear-gradient(to right, #1db954 var(--volume-progress, 100%), #333 var(--volume-progress, 100%));
+  height: 5px;
+  background: linear-gradient(to right, #1db954 var(--volume-progress, 100%), #333 var(--volume-progress, 100%), #333 100%);
   border-radius: 2px;
 }
 
 #volume-slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  width: 12px;
-  height: 12px;
+  width: 13px;
+  height: 13px;
   background: #1db954;
   border-radius: 50%;
   margin-top: -4px;

@@ -63,14 +63,40 @@ document.addEventListener("fullscreenchange", () => {
 });
 
 // 3. Volume Control
+let s1,s2,s3,s4;
+let list = [s1,s2,s3,s4]
 
-const volumeSlider = document.getElementById("volume-slider");
+for (let i = 0; i < list.length; i++) {
+  list[i] = document.querySelector(`#volume-icon-${i + 1}`);
+}
+
+s1=list[0]
+s2=list[1]
+s3=list[2]
+s4=list[3]
+
+const volumeSlider = document.querySelector("#volume-slider");
 let currentVol = 1.0;
 
 volumeSlider.addEventListener("input", (e) => {
   currentVol = parseFloat(e.target.value);
   if (b) b.volume = currentVol;
-  e.target.style.setProperty("--val", currentVol * 100 + "%");
+  e.target.style.setProperty("--volume-progress", currentVol * 100 + "%");
+  list.forEach((e) => {
+    e.classList.add("display-none");
+  });
+  if (currentVol * 100 > 66.6) {
+    s1.classList.remove("display-none")
+  }
+  else if(currentVol * 100 > 33.3){
+    s2.classList.remove("display-none")
+  }
+  else if(currentVol * 100 > 0){
+    s3.classList.remove("display-none")
+  }
+  else if(currentVol * 100 == 0){
+    s4.classList.remove("display-none")
+  }
 });
 
 // screen load

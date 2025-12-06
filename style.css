@@ -178,36 +178,6 @@ body {
   animation: textBg 1s linear none infinite;
 }
 
-.volume-container {
-  width: 150px;
-  margin-top: 10px;
-}
-
-#volumeSlider {
-  width: 100%;
-  -webkit-appearance: none;
-  height: 6px;
-  background: linear-gradient(
-    to right,
-    #1db954 var(--val, 80%),
-    #404040 var(--val, 80%)
-  );
-  border-radius: 5px;
-  outline: none;
-  transition: background 0.3s;
-}
-
-#volumeSlider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 14px;
-  height: 14px;
-  background: #1db954;
-  border-radius: 50%;
-  cursor: pointer;
-  --val: 80%;
-  background: linear-gradient(to right, #1db954 var(--val), #404040 var(--val));
-}
-
 /* 
 .skeleton {
   width: 100%;
