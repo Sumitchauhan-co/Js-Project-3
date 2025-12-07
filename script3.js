@@ -137,16 +137,20 @@ document.onreadystatechange = () => {
 
 ["resize", "load"].forEach((evt) => {
   window.addEventListener(evt, () => {
+    // console.log(window.innerHeight,window.innerWidth)
     if (window.innerWidth < 340) {
       document.querySelector(".not-available").style.display = "grid";
+      document.querySelector(".not-available").style.textAlign = "center";
     } else if (window.innerWidth > 1025 && window.innerWidth < 1150) {
       document.querySelector(".not-available").style.display = "grid";
+      document.querySelector(".not-available").style.textAlign = "center";
     } else if (window.innerWidth > 715 && window.innerWidth < 894) {
       document.querySelector(".not-available").style.display = "grid";
+      document.querySelector(".not-available").style.textAlign = "center";
     } else {
       document.querySelector(".not-available").style.display = "none";
     }
   });
 });
 
-// console.log(window.innerHeight, window.innerWidth);
+// console.log(window.innerHeight, window.innerWidth); 847 716

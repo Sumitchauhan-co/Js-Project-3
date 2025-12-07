@@ -1335,6 +1335,7 @@ sec1OpenPLaylists.addEventListener("click", () => {
     } else {
       //main
 
+      resizer[1].style.display = "block";
       document.querySelector(".footer-page .container-3").style.display =
         "flex";
       if (!sec3.classList.contains("display-none)")) {

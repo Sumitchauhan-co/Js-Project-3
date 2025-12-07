@@ -161,6 +161,7 @@ body {
 }
 
 #rotate-warning img {
+  scale: 1.5;
   height: 30vmin;
   width: 50vmin;
   background-size: cover;
@@ -168,9 +169,12 @@ body {
 }
 
 #rotate-warning .text {
+  margin-top: 5%;
+  scale: 0.9;
+  position: relative;
+  z-index: 999999;
   height: 45px;
   width: 255px;
-  margin-top: 15%;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -303,6 +307,8 @@ body {
     display: none;
   }
 }
+
+/* @media (max-height: 340px) */
 
 /* 1280 to 1920 px for laptops */
 
