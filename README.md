@@ -103,12 +103,6 @@ Spotify-Clone/
 
 ---
 
-## 🧠 Future Enhancements
-
-- 🎨 Extract the avg color from image to show in the background of home page when hover the each image container
-
----
-
 ## 👨‍💻 Developer
 
 **Sumit Chauhan**  

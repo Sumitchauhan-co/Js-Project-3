@@ -689,6 +689,7 @@ let hideBtn = document.querySelector(
 let view = document.querySelector(".footer-page .container-3 .view");
 let viewSvg = document.querySelector(".footer-page .container-3 .view svg");
 let bg = document.querySelectorAll(".section-2 .header-container2 .bg");
+let homeBg = document.querySelector(".section-2 .header-container");
 
 hideBtn.addEventListener("click", () => {
   
@@ -702,6 +703,7 @@ hideBtn.addEventListener("click", () => {
     // sec2.style.left = "-190px";
 
     sec2Header.style.height = "26%";
+    homeBg.style.width = "98%";
     sec2Header.style.gridTemplateColumns =
       "repeat(auto-fit, minmax(250px, 1fr))";
     sec2HeaderDivsPlayBtn.forEach((element) => {
@@ -791,6 +793,7 @@ view.addEventListener("click", () => {
     sec2.style.width = "auto";
 
     sec2Header.style.height = "22%";
+    homeBg.style.width = "100%";
     sec2Header.style.gridTemplateColumns =
       "repeat(auto-fit, minmax(150px, 1fr))";
     sec2HeaderDivsPlayBtn.forEach((element) => {

@@ -57,11 +57,12 @@
 }
 
 .section-2 .page-1 .header-container2 .bg {
-  height: 27%;
+  height: 35%;
   width: 54%;
   background: linear-gradient(180deg, #3754ac, #111111);
   position: absolute;
   border-radius: 15px;
+  top: 55px;
   z-index: 1;
 }
 

@@ -63,17 +63,17 @@ document.addEventListener("fullscreenchange", () => {
 });
 
 // 3. Volume Control
-let s1,s2,s3,s4;
-let list = [s1,s2,s3,s4]
+let s1, s2, s3, s4;
+let list = [s1, s2, s3, s4];
 
 for (let i = 0; i < list.length; i++) {
   list[i] = document.querySelector(`#volume-icon-${i + 1}`);
 }
 
-s1=list[0]
-s2=list[1]
-s3=list[2]
-s4=list[3]
+s1 = list[0];
+s2 = list[1];
+s3 = list[2];
+s4 = list[3];
 
 const volumeSlider = document.querySelector("#volume-slider");
 let currentVol = 1.0;
@@ -86,16 +86,13 @@ volumeSlider.addEventListener("input", (e) => {
     e.classList.add("display-none");
   });
   if (currentVol * 100 > 66.6) {
-    s1.classList.remove("display-none")
-  }
-  else if(currentVol * 100 > 33.3){
-    s2.classList.remove("display-none")
-  }
-  else if(currentVol * 100 > 0){
-    s3.classList.remove("display-none")
-  }
-  else if(currentVol * 100 == 0){
-    s4.classList.remove("display-none")
+    s1.classList.remove("display-none");
+  } else if (currentVol * 100 > 33.3) {
+    s2.classList.remove("display-none");
+  } else if (currentVol * 100 > 0) {
+    s3.classList.remove("display-none");
+  } else if (currentVol * 100 == 0) {
+    s4.classList.remove("display-none");
   }
 });
 
@@ -153,4 +150,90 @@ document.onreadystatechange = () => {
   });
 });
 
-// console.log(window.innerHeight, window.innerWidth); 847 716
+
+// Average color
+
+let listSrc = [];
+let avgColor = [];
+
+async function bgCover() {
+  if(window.innerWidth < 1025) return;
+  let a = await fetch("json/section1.json");
+  let playlists = await a.json();
+
+  for (let i = 0; i < playlists.length; i++) {
+    listSrc[i] = playlists[i].cover;
+  }
+
+  for (let i = 0; i < listSrc.length; i++) {
+    avgColor[i] = await getAverageFromUrl(listSrc[i]);
+  }
+
+
+  const avgColorContainer = document.querySelector(
+    ".section-2 .header-container"
+  );
+  const divs = document.querySelectorAll(
+    ".section-2 .container-class .playlists-container > div"
+  );
+
+  const defaultBg = "#111111";
+
+  for (let i = 0; i < divs.length; i++) {
+    divs[i].addEventListener("mouseenter", () => {
+      avgColorContainer.style.background = `linear-gradient(180deg, ${avgColor[i]}, #111111)`
+    });
+
+    divs[i].addEventListener("mouseleave", () => {
+      // avgColorContainer.style.background = defaultBg;
+    });
+  }
+}
+
+bgCover();
+
+function getAverageColor(imgEl) {
+  const canvas = document.createElement("canvas");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = imgEl.naturalWidth;
+  canvas.height = imgEl.naturalHeight;
+
+  ctx.drawImage(imgEl, 0, 0);
+
+  const data = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+
+  let r = 0,
+    g = 0,
+    b = 0;
+  a = 0;
+  let count = data.length / 4;
+
+  for (let i = 0; i < data.length; i += 4) {
+    r += data[i];
+    g += data[i + 1];
+    b += data[i + 2];
+    a += data[i + 3];
+  }
+
+  r = Math.round(r / count);
+  g = Math.round(g / count);
+  b = Math.round(b / count);
+  a = (a / (count * 255)).toFixed(2);
+
+  return `rgba(${r}, ${g}, ${b}, ${a*0.75})`;
+}
+
+async function getAverageFromUrl(url) {
+  return new Promise((resolve, reject) => {
+    const img = new Image();
+    img.crossOrigin = "anonymous";
+    img.src = url;
+
+    img.onload = () => {
+      const avg = getAverageColor(img);
+      resolve(avg);
+    };
+    img.onerror = () => reject("Image failed to load");
+  });
+}

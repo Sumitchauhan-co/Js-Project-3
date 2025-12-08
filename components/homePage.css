@@ -4,8 +4,8 @@
 }
 
 .section-2 .header-container {
-  height: 35%;
-  width: 54%;
+  height: 40%;
+  width: 53%;
   /* background: linear-gradient(180deg, #5f1f62, #111111); */
   /* background-image: url(); */
   position: absolute;
@@ -650,3 +650,7 @@
   color: white;
   cursor: pointer;
 }
+
+/* .section-2 .header-container {
+
+} */

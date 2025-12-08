@@ -21,10 +21,11 @@
 }
 
 .section-2 .page-2-phone .phone-header-container2 .bg {
-  height: 17%;
+  height: 22%;
   width: 83%;
-  background: linear-gradient(180deg, #cccf13, #111111);
+  background: linear-gradient(180deg, #aaac0c, #111111);
   position: absolute;
   border-radius: 15px;
+  top: 72px;
   z-index: 1;
 }
