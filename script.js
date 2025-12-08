@@ -843,7 +843,7 @@ document.addEventListener("mousemove", (e) => {
   );
 
   if (newWidth < 350) {
-    homeBg.style.width = "55%"  // -o- //
+    homeBg.style.width = "55%"  
     console.log(homeBg)
     section1Closed = false;
     sec3.style.width = "auto";
@@ -871,7 +871,7 @@ document.addEventListener("mousemove", (e) => {
     }
   }
   if (newWidth >285 && newWidth < 315) {
-    homeBg.style.width = "57%"  // -o- //
+    homeBg.style.width = "57%"  
   }
   if (newWidth <= 285) {
     homeBg.style.width = "68%"

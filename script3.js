@@ -158,6 +158,8 @@ let avgColor = [];
 
 async function bgCover() {
   if(window.innerWidth < 1025) return;
+  if(window.innerWidth < 1500 && window.innerWidth > 1575) return;
+
   let a = await fetch("json/section1.json");
   let playlists = await a.json();
 

@@ -647,6 +647,129 @@ body {
   }
 }
 
+/*  -o-  */
+
+
+@media (min-width: 1900px) and (max-width: 2000px) {
+  .section-2 .header-container {
+    width: 58% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 58% !important;
+  }
+}
+
+@media (min-width: 1800px) and (max-width: 1900px) {
+  .section-2 .header-container {
+    width: 57% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 57% !important;
+  }
+}
+
+@media (min-width: 1700px) and (max-width: 1800px) {
+  .section-2 .header-container {
+    width: 56% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 56% !important;
+  }
+}
+
+@media (min-width: 1625px) and (max-width: 1700px) {
+  .section-2 .header-container {
+    width: 55% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 55% !important;
+  }
+}
+
+@media (min-width: 1525px) and (max-width: 1625px) {
+  .section-2 .header-container {
+    width: 54% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 54% !important;
+  }
+}
+
+@media (min-width: 1525px) and (max-width: 1550px) {
+  .section-2 .header-container {
+    width: 53% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 53% !important;
+  }
+}
+
+@media (min-width: 1475px) and (max-width: 1525px) {
+  .section-2 .header-container {
+    width: 52% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 52% !important;
+  }
+}
+
+@media (min-width: 1375px) and (max-width: 1475px) {
+  .section-2 .header-container {
+    width: 51% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 51% !important;
+  }
+}
+
+@media (min-width: 1325px) and (max-width: 1375px) {
+  .section-2 .header-container {
+    width: 50% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 50% !important;
+  }
+}
+
+@media (min-width: 1250px) and (max-width: 1325px) {
+  .section-2 .header-container {
+    width: 49% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 49% !important;
+  }
+}
+
+@media (min-width: 1225px) and (max-width: 1250px) {
+  .section-2 .header-container {
+    width: 48% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 48% !important;
+  }
+}
+
+@media (min-width: 1175px) and (max-width: 1225px) {
+  .section-2 .header-container {
+    width: 47% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 47% !important;
+  }
+}
+
+@media (min-width: 1150px) and (max-width: 1175px) {
+  .section-2 .header-container {
+    width: 46% ;
+  }
+  .section-2 .header-container2 .bg {
+    width: 46% !important;
+  }
+}
+
+
+/*  -o-  */
+
 /* @media (min-width: 1575px) {
   .section-2 .header-container2 .img {
     height: 100% !important;
