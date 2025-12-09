@@ -655,7 +655,7 @@ body {
     width: 58% ;
   }
   .section-2 .header-container2 .bg {
-    width: 58% !important;
+    width: 58% ;
   }
 }
 
@@ -664,7 +664,7 @@ body {
     width: 57% ;
   }
   .section-2 .header-container2 .bg {
-    width: 57% !important;
+    width: 57% ;
   }
 }
 
@@ -673,7 +673,7 @@ body {
     width: 56% ;
   }
   .section-2 .header-container2 .bg {
-    width: 56% !important;
+    width: 56% ;
   }
 }
 
@@ -682,16 +682,16 @@ body {
     width: 55% ;
   }
   .section-2 .header-container2 .bg {
-    width: 55% !important;
+    width: 55% ;
   }
 }
 
-@media (min-width: 1525px) and (max-width: 1625px) {
+@media (min-width: 1550px) and (max-width: 1625px) {
   .section-2 .header-container {
     width: 54% ;
   }
   .section-2 .header-container2 .bg {
-    width: 54% !important;
+    width: 54% ;
   }
 }
 
@@ -700,7 +700,7 @@ body {
     width: 53% ;
   }
   .section-2 .header-container2 .bg {
-    width: 53% !important;
+    width: 53% ;
   }
 }
 
@@ -709,7 +709,7 @@ body {
     width: 52% ;
   }
   .section-2 .header-container2 .bg {
-    width: 52% !important;
+    width: 52% ;
   }
 }
 
@@ -718,7 +718,7 @@ body {
     width: 51% ;
   }
   .section-2 .header-container2 .bg {
-    width: 51% !important;
+    width: 51% ;
   }
 }
 
@@ -727,7 +727,7 @@ body {
     width: 50% ;
   }
   .section-2 .header-container2 .bg {
-    width: 50% !important;
+    width: 50% ;
   }
 }
 
@@ -736,7 +736,7 @@ body {
     width: 49% ;
   }
   .section-2 .header-container2 .bg {
-    width: 49% !important;
+    width: 49% ;
   }
 }
 
@@ -745,7 +745,7 @@ body {
     width: 48% ;
   }
   .section-2 .header-container2 .bg {
-    width: 48% !important;
+    width: 48% ;
   }
 }
 
@@ -754,7 +754,7 @@ body {
     width: 47% ;
   }
   .section-2 .header-container2 .bg {
-    width: 47% !important;
+    width: 47% ;
   }
 }
 
@@ -763,7 +763,7 @@ body {
     width: 46% ;
   }
   .section-2 .header-container2 .bg {
-    width: 46% !important;
+    width: 46% ;
   }
 }
 

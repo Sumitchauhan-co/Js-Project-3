@@ -434,8 +434,6 @@ async function sec1Main() {
 
     //  average color extract
 
-
-
     sec1PlaylistContainerDivImg = document.querySelectorAll(
       ".section-1 > div .img"
     );
@@ -843,43 +841,61 @@ document.addEventListener("mousemove", (e) => {
   );
 
   if (newWidth < 350) {
-    homeBg.style.width = "55%"  
-    console.log(homeBg)
+    if (isHideHit) {
+      homeBg.style.width = "100%";
+    } else {
+      homeBg.style.width = "54%";
+    }
     section1Closed = false;
     sec3.style.width = "auto";
     document.querySelector(".section-3 .banner").style.height = "60%";
+    document.querySelector(".section-3 .banner").style.top = "0";
     midBtnSpan.textContent = "";
     midBtn.classList.add("change");
   } else if (newWidth > 350) {
-    homeBg.style.width = "53%"
-    section1Closed = false;
-    // sec3.style.width = "290px";
-    sec3.style.width = "auto";
-    document.querySelector(".section-3 .banner").style.height = "50%";
-    midBtnSpan.textContent = "Create";
-    midBtn.classList.remove("change");
     if (isHideHit) {
-      bg.forEach((element) => {
-        element.style.width = "100%";
-        element.style.height = "33%";
-      });
+      homeBg.style.width = "100%";
     } else {
-      bg.forEach((element) => {
-        element.style.width = "54%";
-        element.style.height = "27%";
-      });
+      homeBg.style.width = "53%";
     }
   }
-  if (newWidth >285 && newWidth < 315) {
-    homeBg.style.width = "57%"  
+  section1Closed = false;
+  // sec3.style.width = "290px";
+  sec3.style.width = "auto";
+  document.querySelector(".section-3 .banner").style.height = "50%";
+  midBtnSpan.textContent = "Create";
+  midBtn.classList.remove("change");
+  if (isHideHit) {
+    bg.forEach((element) => {
+      element.style.width = "100%";
+      element.style.height = "33%";
+      element.style.top = "0";
+    });
+  } else {
+    bg.forEach((element) => {
+      element.style.width = "54%";
+      element.style.height = "27%";
+    });
+  }
+  if (newWidth > 285 && newWidth < 315) {
+    if (isHideHit) {
+      homeBg.style.width = "100%";
+    } else {
+      homeBg.style.width = "57%";
+    }
   }
   if (newWidth <= 285) {
-    homeBg.style.width = "68%"
+    if (isHideHit) {
+      homeBg.style.width = "100%";
+    } else {
+      homeBg.style.width = "68%";
+    }
     document.documentElement.style.setProperty("--section-1-width", 75 + "px");
     if (isHideHit) {
       bg.forEach((element) => {
         element.style.width = "100%";
         element.style.height = "33%";
+        element.style.top = "0";
       });
     } else {
       bg.forEach((element) => {
@@ -926,6 +942,7 @@ document.addEventListener("mousemove", (e) => {
       bg.forEach((element) => {
         element.style.width = "100%";
         element.style.height = "33%";
+        element.style.top = "0";
       });
     } else {
       bg.forEach((element) => {
@@ -1096,6 +1113,7 @@ sec1OpenPLaylists.addEventListener("click", () => {
     bg.forEach((element) => {
       element.style.width = "100%";
       element.style.height = "33%";
+      element.style.top = "0";
     });
   } else {
     bg.forEach((element) => {
@@ -1103,7 +1121,11 @@ sec1OpenPLaylists.addEventListener("click", () => {
       element.style.height = "27%";
     });
   }
-  homeBg.style.width = "53%"
+  if (isHideHit) {
+    homeBg.style.width = "100%";
+  } else {
+    homeBg.style.width = "53%";
+  }
   sec2Header.style.gridTemplateColumns = "repeat(auto-fit, minmax(150px, 1fr))";
   sec1PlaylistContent.forEach((element) => {
     element.classList.remove("display-none");

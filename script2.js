@@ -770,6 +770,7 @@ hideBtn.addEventListener("click", () => {
     bg.forEach((element) => {
       element.style.width = "100%";
       element.style.height = "60%";
+      element.style.top = "0"
     });
     resizer[0].style.cursor = "default";
     sec2PageSongs.forEach((element) => {
@@ -855,6 +856,7 @@ view.addEventListener("click", () => {
     bg.forEach((element) => {
       element.style.width = "100%";
       element.style.height = "33%";
+      element.style.top = "0"
     });
     sec2PageSongs.forEach((element) => {
       element.style.height = "8vh";
